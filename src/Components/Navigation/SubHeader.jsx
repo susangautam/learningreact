@@ -1,12 +1,37 @@
 
 import { FaSearch } from "react-icons/fa";
 import {Link} from 'react-router-dom'
+import Modal from "../UI/modal";
+import { useState } from "react";
 function SubHeader() {
-
+  const [loginShow,setLoginShow] = useState(false)
   return (
 
    <>
-   
+   <Modal loginShow={loginShow} setLoginShow={setLoginShow} >
+   <div className="w-96 flex flex-col gap-10">
+    <div className="text-primary font-bold text-3xl underline">Register</div>
+    <div>
+    <div className="flex gap-4 flex-col">
+      <div>
+      <label>Email : </label>
+      <input type="email" className="border outline-none border-gray-300 py-2 px-4 placeholder:capitalize"/>
+      </div>
+      <div>
+        <label>Password : </label>
+        <input type="password" className="border outline-none border-gray-300 py-2 px-4 placeholder:capitalize" />
+      </div>
+      <div>
+        <button className="border-primary border rounded-md p-3  text-primary group relative shadow-lg">
+        <div className="relative z-10 group-hover:text-white font-semibold"> Register</div>
+        <div className="h-full absolute top-0 -left-0  rounded-md bg-primary w-0 group-hover:w-full transistion-all duration-700 delay-75 ease-in-out"></div>
+        </button>
+      </div>
+      </div>
+   </div>
+   </div>
+    
+   </Modal>
    <div className="flex justify-between px-5  mt-3">
     <div className="tracking-widest font-bold text-2xl py-3">CLEVER</div>
     <div>
@@ -26,8 +51,11 @@ function SubHeader() {
     </div>
     </div>
     <div className="flex gap-2">
-      <button className="text-blue-700 w-fit h-fit bg-none  hover:bg-[#D7E0FC] px-6 py-3 rounded-md font-semibold transistion ease-in duration-300" >REGISTER</button>
-      <button className="text-blue-700 w-fit h-fit bg-[#D7E0FC] px-6 py-3  rounded-md font-semibold">LOGIN</button>
+      <button onClick={()=> setLoginShow(true)
+      } className="text-blue-700 w-fit h-fit bg-none  hover:bg-[#D7E0FC] px-6 py-3 rounded-md font-semibold transistion ease-in duration-300" >REGISTER</button>
+      <button onClick={()=> 
+        setLoginShow(true)
+      } className="text-blue-700 w-fit h-fit bg-[#D7E0FC] px-6 py-3  rounded-md font-semibold">LOGIN</button>
     </div>
     </div>
    </>
