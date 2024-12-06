@@ -11,7 +11,7 @@ function SubHeader() {
     <>
       <Modal registerShow={registerShow} setRegisterShow={setRegisterShow}>
         <div className="w-96 flex flex-col gap-10">
-          <div className="text-primary font-bold text-3xl underline">
+          <div className="text-primary text-4xl text-center font-bold underline" >
             {LoginShow ? "Login" : "Register"}
           </div>
           <div className="flex gap-4 flex-col">
@@ -42,7 +42,7 @@ function SubHeader() {
         </div>
       </Modal>
 
-      <div className="flex justify-between px-5 mt-3">
+      <div className="flex justify-between px-5 mt-4  w-full  z-50 " >
         <div className="tracking-widest font-bold text-2xl py-3">CLEVER</div>
         <div>
           <div className="flex gap-6 ml-20">
@@ -87,7 +87,7 @@ function SubHeader() {
           <button
             onClick={() => {
               setRegisterShow(true);  
-              setLoginShow(true);
+              setLoginShow(true); 
             }}
             className="text-blue-700 w-fit h-fit bg-[#D7E0FC] px-6 py-3 rounded-md font-semibold">
             LOGIN

@@ -10,8 +10,8 @@ import SubHeader from "./SubHeader";
 
 function Header() {
   return (
-    <>
-      <div style={{ backgroundColor: "#333333" }}>
+    <div className="bg-white fixed w-full top-0 left-0 z-50">
+      <div className="bg-[#333333]  w-full z-50" >
         <div className="bg-tertiary text-white flex justify-between ">
           <div className=" flex gap-4">
             <div className="py-3 px-3">
@@ -55,8 +55,9 @@ function Header() {
           </div>
         </div>
       </div>
-
-      <div className="flex justify-between text-gray-500  border-gray-500">
+<div >
+  
+<div className="flex justify-between  text-gray-500  border-gray-500 z-40">
         <ul className="flex gap-10 px-4 ">
           <li className="hover:text-black cursor-pointer text-xs transition ease-in duration-300 py-3 px-3 font-medium">
             PHONE : +977 971231232
@@ -84,8 +85,9 @@ function Header() {
         </div>
       </div>
       
-      <div><SubHeader /></div>
-    </>
+      <div className=""><SubHeader /></div>
+</div>
+    </div>
   );
 }
 

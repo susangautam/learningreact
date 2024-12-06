@@ -1,7 +1,7 @@
 
 function Blog() {
   return (
-    <div>
+    <div className="text-red-500">
       Blog
     </div>
   )
